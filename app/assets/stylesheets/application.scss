@@ -14,8 +14,30 @@
  *= require_self
  */
 
+@font-face {
+  font-family: Figtree;
+  src: url("/fonts/figtree/Figtree-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Miller Display Roman";
+  src: url("/fonts/Miller Display Roman/Miller Display Roman.otf");
+}
+
 @import "bootstrap";
+
+:root {
+  --bs-primary: #c29c75;
+  --bs-secondary: #efeee9;
+  --bs-primary-rgb: 194, 156, 117;
+  --bs-secondary-rgb: 239, 238, 233;
+  --bs-font-sans-serif: Figtree, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 html, body {
   min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h5 {
+  font-family: "Miller Display Roman";
 }
