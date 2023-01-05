@@ -1,20 +1,22 @@
-<div class="position-relative">
-  <%= image_tag "Park-Royal-Acapulco-Pool-Bar-1536x864-1.jpeg", style: "width: 100vw;" %>
-  <div class="position-absolute text-center w-100 text-white" style="top: 40%; letter-spacing: 0.5rem;">
-    <h1>DESTINOS</h1>
-    <hr class="border-white w-50 mx-auto" style="border-top-width: 2px; opacity: 1;">
+<div>
+  <div class="position-relative">
+    <%= image_tag "Park-Royal-Acapulco-Pool-Bar-1536x864-1.jpeg", style: "width: 100vw;" %>
+    <div class="position-absolute text-center w-100 text-white" style="top: 40%; letter-spacing: 0.5rem;">
+      <h1>DESTINOS</h1>
+      <hr class="border-white w-50 mx-auto" style="border-top-width: 2px; opacity: 1;">
+    </div>
   </div>
-</div>
 
-<div class="container">
-  <div class="p-3 text-center">
-    <h2>Bienvenido a unas vacaciones llenas de lujo</h2>
-    <p>Seleccionado como uno de los Mejores Destinos en México y uno de los Mejores Destinos en el Mundo por los World's Best Awards de Travel + Leisure, Dantavi ofrece una de las mejores experiencias vacacionales. Estos destinos ha sido cuidadosamente diseñados para ofrecerle una lujosa experiencia llena de opciones, incluyendo un sinfín de restaurantes y bares, tres campos y una academia de golf, un centro comercial, un centro de entretenimiento, dos spas, innumerables piscinas, y la nueva área de Beachland.</p>
+  <div class="container mt-2">
+    <div class="p-3 text-center">
+      <h2>Las experiencias vacacionales más extraordinarias del mundo</h2>
+      <p class="w-75 mx-auto">Bienvenido a unas vacaciones de lujo en el paraíso. Bienvenido al mundo Dantavi, una colección de lujosos resorts, ubicados en los escenarios más hermosos de México. Con amenidades de la más alta calidad, alojamientos de máximo lujo y el mejor servicio en México. Nada como unas vacaciones en Dantavi.</p>
+    </div>
   </div>
 </div>
 
 <% @destinations.each do |destination| %>
-  <div>
+  <div class="my-5">
     <div class="position-relative">
       <%= image_tag "Malecon-de-Puerto-Vallarta.jpeg", style: "width: 100%; height: 250px; object-fit: cover;"%>
       <div class="position-absolute w-100 h-100 p-3 text-center text-white" style="top: 40%;">
@@ -25,10 +27,12 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container mt-2">
       <div class="p-3 text-center">
-        <h2>Un mundo selvático lleno de lujo</h2>
-        <p>Reconocido como uno de los 5 mejores Destinos en la región este de México por Condé Nast Traveler's Readers' Choice Awards, Vidanta Riviera Maya es una experiencia como ninguna otra. Los huéspedes pueden explorar más de 400 hectáreas de este paraíso que cuenta con piscinas impecables y está bordeado por una playa magnífica. En <%= destination.name %>, usted disfrutará de más de 15 bares y restaurantes de clase mundial, un campo de golf diseñado por Jack Nicklaus, servicios de spa de lujo y el mejor entretenimiento, como el show residente de Cirque du Soleil en Riviera Maya: JOYÀ y el fantástico mundo acuático que es Jungala Aqua Experience.</p>
+        <h2>
+          <%= destination.description_title %>
+        </h2>
+        <p class="w-75 mx-auto">Reconocido como uno de los 5 mejores Destinos en la región este de México por Condé Nast Traveler's Readers' Choice Awards, Vidanta Riviera Maya es una experiencia como ninguna otra. Los huéspedes pueden explorar más de 400 hectáreas de este paraíso que cuenta con piscinas impecables y está bordeado por una playa magnífica. En <%= destination.name %>, usted disfrutará de más de 15 bares y restaurantes de clase mundial, un campo de golf diseñado por Jack Nicklaus, servicios de spa de lujo y el mejor entretenimiento, como el show residente de Cirque du Soleil en Riviera Maya: JOYÀ y el fantástico mundo acuático que es Jungala Aqua Experience.</p>
       </div>
     </div>
   </div>
