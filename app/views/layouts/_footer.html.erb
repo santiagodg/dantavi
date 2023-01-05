@@ -1,16 +1,17 @@
 <div class="bg-secondary">
-  <div class="container">
+  <div class="container py-5">
     <div class="row">
       <div class="col">
-        <h4>DESTINOS</h4>
-        <ul>
+        <%= link_to "DESTINOS", "/destinations", {:class => "h4 text-body text-decoration-none"}%>
+        <hr class="border-dark mt-2 mb-4 w-50">
+        <div>
           <% @destinations.each do |destination| %>
-            <li>
-              <%= link_to destination.name.upcase, destination %>
-            </li>
+              <%= link_to destination.name.upcase, destination, {:class => "text-dark text-decoration-none d-block my-1"} %>
           <% end %>
-        </ul>
+        </div>
       </div>
+      <div class="col"></div>
+      <div class="col"></div>
     </div>
   </div>
 </div>
