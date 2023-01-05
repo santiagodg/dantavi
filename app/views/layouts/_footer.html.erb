@@ -1,0 +1,16 @@
+<div class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4>Destinos</h4>
+        <ul>
+          <% @destinations.each do |destination| %>
+            <li>
+              <%= link_to destination.name, destination %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
