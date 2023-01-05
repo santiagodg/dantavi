@@ -19,10 +19,8 @@
   <div class="my-5">
     <div class="position-relative">
       <%= image_tag "Malecon-de-Puerto-Vallarta.jpeg", style: "width: 100%; height: 250px; object-fit: cover;"%>
-      <div class="position-absolute w-100 h-100 p-3 text-center text-white" style="top: 40%;">
-        <h2>
-          <%= destination.name.upcase %>
-        </h2>
+      <div class="position-absolute w-100 h-100 p-3 text-center" style="top: 40%;">
+        <%= link_to destination.name.upcase, destination, {:class => "h2 text-decoration-none text-white"}%>
         <hr class="border-white w-25 mx-auto" style="border-top-width: 2px; opacity: 1;">
       </div>
     </div>
