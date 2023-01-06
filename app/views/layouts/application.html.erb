@@ -8,13 +8,52 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   </head>
 
   <body class="d-flex flex-column">
     <%= render "layouts/header" %>
+
+    <% if notice %>
+      <div class="toast-container position-fixed end-0 p-3" style="top: 60px;">
+        <div id="notice-toast" class="toast align-items-center bg-secondary" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body">
+              <%= notice %>
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+      <script>
+        const toastElement = document.getElementById('notice-toast')
+        const toast = new bootstrap.Toast(toastElement)
+        toast.show()
+      </script>
+    <% end %>
+
+    <% if alert %>
+      <div class="toast-container position-fixed end-0 p-3" style="top: 60px;">
+        <div id="alert-toast" class="toast align-items-center bg-secondary" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body">
+              <%= alert %>
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+      <script>
+        const toastElement = document.getElementById('alert-toast')
+        const toast = new bootstrap.Toast(toastElement)
+        toast.show()
+      </script>
+    <% end %>
+
     <div class="flex-grow-1">
       <%= yield %>
     </div>
+
     <%= render "layouts/footer" %>
   </body>
 </html>
