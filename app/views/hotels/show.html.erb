@@ -1,0 +1,20 @@
+<div class="position-relative">
+  <%= image_tag @hotel.image_url, style: "width: 100vw;" %>
+  <div class="position-absolute text-center w-100 text-white" style="top: 45%; letter-spacing: 0.5rem;">
+    <h1>
+      <%= @hotel.name.upcase %>
+    </h1>
+    <hr class="border-white w-50 mx-auto" style="border-top-width: 2px; opacity: 1;">
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="p-3 text-center">
+    <h2>
+      <%= @hotel.description_title %>
+    </h2>
+    <p class="w-75 mx-auto">
+      <%= @hotel.description %>
+    </p>
+  </div>
+</div>
