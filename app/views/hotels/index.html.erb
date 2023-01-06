@@ -1,0 +1,39 @@
+<div>
+  <div class="position-relative">
+    <%= image_tag "Hotel Resort.jpeg", style: "width: 100vw;" %>
+    <div class="position-absolute text-center w-100 text-white" style="top: 40%; letter-spacing: 0.5rem;">
+      <h1>HOTELES</h1>
+      <hr class="border-white w-50 mx-auto" style="border-top-width: 2px; opacity: 1;">
+    </div>
+  </div>
+
+  <div class="container mt-2">
+    <div class="p-3 text-center">
+      <h2>Las experiencias vacacionales más extraordinarias del mundo</h2>
+      <p class="w-75 mx-auto">Desde estilo sofisticado, hasta un sentimiento de confort pleno para disfrutar en familia, encuentre la experiencia vacacional que busca en nuestra selecta variedad de refinados hoteles resort.</p>
+    </div>
+  </div>
+</div>
+
+<% @hotels.each do |hotel| %>
+  <div class="my-5">
+    <div class="position-relative">
+      <%= image_tag hotel.image_url, style: "width: 100%; height: 250px; object-fit: cover;"%>
+      <div class="position-absolute w-100 h-100 p-3 text-center" style="top: 40%;">
+        <%= link_to hotel.name.upcase, hotel, {:class => "h2 text-decoration-none text-white"}%>
+        <hr class="border-white w-25 mx-auto" style="border-top-width: 2px; opacity: 1;">
+      </div>
+    </div>
+
+    <div class="container mt-2">
+      <div class="p-3 text-center">
+        <h2>
+          <%= hotel.description_title %>
+        </h2>
+        <p class="w-75 mx-auto">
+          <%= hotel.description %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>

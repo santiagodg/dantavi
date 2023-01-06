@@ -5,5 +5,6 @@ class ApplicationController < ActionController::Base
 
     def set_meta
       @destinations = Destination.all
+      @hotels = Hotel.all
     end
 end

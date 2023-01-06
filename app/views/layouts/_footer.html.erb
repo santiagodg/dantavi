@@ -10,7 +10,15 @@
           <% end %>
         </div>
       </div>
-      <div class="col"></div>
+      <div class="col">
+        <%= link_to "HOTELES", "/hotels", {:class => "h4 text-body text-decoration-none"}%>
+        <hr class="border-dark mt-2 mb-4 w-50">
+        <div>
+          <% @hotels.each do |hotel| %>
+              <%= link_to hotel.name.upcase, hotel, {:class => "text-dark text-decoration-none d-block my-1"} %>
+          <% end %>
+        </div>
+      </div>
       <div class="col"></div>
     </div>
   </div>

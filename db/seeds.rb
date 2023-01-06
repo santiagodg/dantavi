@@ -32,3 +32,45 @@ Destination.create(
   description: "Dantavi Puerto Durazo es un oasis acogedor ubicado en la ciudad más amigable del mundo. Recuéstese cerca de la piscina o relájese con un masaje en la playa mientras nuestro excelente equipo se hace cargo de todas sus necesidades. Los huéspedes también disfrutan de acceso completo a Viejo Vallarta, que se encuentra a un viaje corto de distancia.",
   image_url: "Puerto Durazo.jpeg",
 )
+
+Hotel.create(
+  name: "Los Estados",
+  description_title: "Un mundo de lujo privado",
+  description: "Le presentamos el escenario perfecto: máximo lujo, rodeado de máxima naturaleza. The Estates ya está abierto en Nuevo Vallarta, con ubicaciones próximamente en Riviera Maya e East Cape. En The Estates, podrá disfrutar de lo mejor de las vacaciones de lujo, en este paraíso privado de serenidad y comodidad absoluta.",
+  image_url: "hotels/Los Estados.jpg",
+)
+
+Hotel.create(
+  name: "Gran Lujjo",
+  description_title: "Un paraíso lleno de lujo",
+  description: "Con suntuosas torres de alojamientos construidas a lo largo del espectacular río Ameca, Gran Lujjo es un modelo de vivienda de lujo.",
+  image_url: "hotels/Gran Lujjo.jpg",
+)
+
+Hotel.create(
+  name: "La Gran Dicha",
+  description_title: "Experimente lo exquisito",
+  description: "La romántica privacidad de este hotel boutique tiene todas las comodidades modernas de un resort de lujo. En Gran Dicha la elegancia se encuentra con detalles a la medida y todo lo que tiene que hacer es llegar, relajarse y disfrutar.",
+  image_url: "hotels/La Gran Dicha.jpg",
+)
+
+Hotel.create(
+  name: "El Gran Otomí",
+  description_title: "La felicidad es nuestra tradición",
+  description: "Entre a un mundo lleno de relajación, en donde el lujo moderno coexiste con la sabiduría ancestral. El Gran Otomí rebosa de espacios únicos y oportunidades especiales para que toda su familia pueda experimentar unas vacaciones como nunca antes. Juegue, desconéctese, explore y descubra por qué este espacio sagrado es nuestro resort más popular.",
+  image_url: "hotels/El Gran Otomi.jpg",
+)
+
+Hotel.create(
+  name: "La Dicha",
+  description_title: "Paz absoluta en el paraíso",
+  description: "Si la felicidad fuera un lugar, luciría como este: La Dicha es un espacio casual y lleno de comodidad dentro de un santuario natural virgen. Los hermosos e íntimos alojamientos se encuentran a solo a unos pasos de la prístina arena blanca. La Dicha ofrece una experiencia boutique moderna con un servicio de clase mundial que usted amará. Una vez que se deje llevar por estas lujosas vacaciones, querrá volver año con año.",
+  image_url: "hotels/La Dicha.jpg",
+)
+
+Hotel.create(
+  name: "Palacio Otomí",
+  description_title: "Únase a nuestra familia",
+  description: "Palacio Otomí es nuestro resort más querido, pues mantiene un legado de diversión, relajación y felicidad inolvidable. Hay un motivo por el que Palacio Otomí es uno de los destinos más conocidos en México: familias de todos los tamaños regresan año tras año a disfrutar de la cordialidad única y los alrededores exóticos que sólo se encuentran en los destinos de Palacio Otomí. Descubra usted mismo qué hace a este resort tan especial y conviértalo en su tradición favorita.",
+  image_url: "hotels/Palacio Otomi.jpg",
+)
