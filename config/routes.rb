@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   resources :hotels
   resources :destinations
-  get "/destination_hotels", to: "destination_hotels#show", as: "destination_hotel"
+  resources :destination_hotels
+  resources :reservations
 end

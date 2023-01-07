@@ -1,0 +1,13 @@
+<div class="container my-5">
+  <h1 class="mb-4">¡Gracias por reservar con nosotros!</h1>
+  <p>
+    Número de Reservación: <%= sprintf('R%06d', @reservation.id) %><br>
+    Número de Usuario: <%= sprintf('U%06d', @reservation.user.id) %><br>
+    Correo Electrónico del Usuario: <%= @reservation.user.email %><br>
+    Destino: <%= @reservation.destination.name %><br>
+    Hotel: <%= @reservation.hotel.name %><br>
+    Inicio de Reservación: <%= @reservation.start %><br>
+    Fin de Reservación: <%= @reservation.end %><br>
+    Cantidad de Invitados: <%= @reservation.party_size %>
+  </p>
+</div>

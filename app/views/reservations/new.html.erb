@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="card bg-secondary my-5 p-5">
+    <h1>New Reservation</h1>
+    <%= form_with model: @reservation do |form| %>
+      <div class="field">
+        <%= form.hidden_field :destination_hotel_id, value: @reservation.destination_hotel_id %>
+        <% @reservation.errors.full_messages_for(:destination_hotel_id).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+      <div class="field">
+        <%= form.hidden_field :user_id, value: current_user.id %>
+        <% @reservation.errors.full_messages_for(:user_id).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+      <div class="field mb-3">
+        <p class="mb-0">Destino: <%= @reservation.destination.name %></p>
+        <p>Hotel: <%= @reservation.hotel.name %></p>
+      </div>
+
+      <div class="field mb-3">
+        <%= form.label(:start, "Inicio de reservación") %><br>
+        <%= form.date_field :start %>
+        <% @reservation.errors.full_messages_for(:start).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+      <div class="field mb-3">
+        <%= form.label(:end, "Fin de reservación") %><br>
+        <%= form.date_field :end %>
+        <% @reservation.errors.full_messages_for(:end).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+      <div class="field mb-3">
+        <%= form.label(:party_size, "Cantidad de personas") %><br>
+        <%= form.number_field :party_size, in: 1..10 %>
+        <% @reservation.errors.full_messages_for(:party_size).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+      <div class="text-center mb-3">
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>

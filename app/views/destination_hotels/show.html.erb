@@ -1,34 +1,40 @@
 <div class="position-relative">
-  <%= image_tag @destination.image_url, style: "width: 100vw;" %>
+  <%= image_tag @destination_hotel.destination.image_url, style: "width: 100vw;" %>
   <div class="position-absolute text-center w-100 text-white" style="top: 45%; letter-spacing: 0.5rem;">
     <h1>
-      <%= @destination.name.upcase %><br>
-      <%= @hotel.name %>
+      <%= @destination_hotel.destination.name.upcase %><br>
+      <%= @destination_hotel.hotel.name %>
     </h1>
     <hr class="border-white w-50 mx-auto" style="border-top-width: 2px; opacity: 1;">
   </div>
 </div>
 
-<div class="container my-5">
+<div class="container my-5 text-center">
+  <% if user_signed_in? %>
+    <%= link_to "RESERVA YA", new_reservation_path(destination_hotel: @destination_hotel), { class: "btn btn-primary w-25 mb-5" } %>
+  <% else %>
+    <%= link_to "RESERVA YA", new_user_session_path, { class: "btn btn-primary w-25 mb-5" } %>
+  <% end %>
+
   <div class="row">
     <div class="col">
-      <div class="p-3 text-center">
+      <div class="p-3">
         <h2>
-          <%= @destination.description_title %>
+          <%= @destination_hotel.destination.description_title %>
         </h2>
         <p class="w-75 mx-auto">
-          <%= @destination.description %>
+          <%= @destination_hotel.destination.description %>
         </p>
       </div>
     </div>
 
     <div class="col">
-      <div class="p-3 text-center">
+      <div class="p-3">
         <h2>
-          <%= @hotel.description_title %>
+          <%= @destination_hotel.hotel.description_title %>
         </h2>
         <p class="w-75 mx-auto">
-          <%= @hotel.description %>
+          <%= @destination_hotel.hotel.description %>
         </p>
       </div>
     </div>

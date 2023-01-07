@@ -1,7 +1,5 @@
 class DestinationHotelsController < ApplicationController
   def show
-    puts "on destination hotels controller"
-    @destination = Destination.find(params[:destination_id])
-    @hotel = Hotel.find(params[:hotel_id])
+    @destination_hotel = DestinationHotel.find(params[:id])
   end
 end
