@@ -18,3 +18,25 @@
     </p>
   </div>
 </div>
+
+<div>
+  <h2 class="text-center mb-3">Hoteles</h2>
+  <div class="row gx-0">
+    <% if (@destination.hotels.count / 3) >= 1 %>
+      <% (@destination.hotels.count / 3).times do |index| %>
+        <% @destination.hotels[index,3].each do |hotel| %>
+          <div class="col-4">
+            <%= render "destinations/hotel", destination: @destination, hotel: hotel %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+    <% if (@destination.hotels.count % 3) != 0 %>
+      <% @destination.hotels[-(@destination.hotels.count % 3)..-1].each do |hotel| %>
+        <div class="col-<%= 12 / (@destination.hotels.count % 3) %>">
+          <%= render "destinations/hotel", destination: @destination, hotel: hotel %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

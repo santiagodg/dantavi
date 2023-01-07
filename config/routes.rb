@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :destinations
   resources :hotels
+  resources :destinations
+  get "/destination_hotels", to: "destination_hotels#show", as: "destination_hotel"
 end
