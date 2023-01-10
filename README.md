@@ -25,5 +25,3 @@ rails db:migrate:reset
 ```
 rails server
 ```
-
-checking if git pushing is available
