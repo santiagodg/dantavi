@@ -47,11 +47,11 @@ rails server
 
 ### Hotels Index
 
-![Hotels Page 1](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hotels-1.png?raw=true)
-![Hotels Page 2](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hotels-2.png?raw=true)
-![Hotels Page 3](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hotels-3.png?raw=true)
-![Hotels Page 4](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hotels-4.png?raw=true)
-![Hotels Page 5](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hotels-5.png?raw=true)
+![Hotels Page 1](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hoteles-1.png?raw=true)
+![Hotels Page 2](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hoteles-2.png?raw=true)
+![Hotels Page 3](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hoteles-3.png?raw=true)
+![Hotels Page 4](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hoteles-4.png?raw=true)
+![Hotels Page 5](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/hoteles-5.png?raw=true)
 
 ## Show Hotel
 
