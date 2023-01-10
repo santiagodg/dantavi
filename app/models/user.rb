@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :reservations
+
+  validates :is_admin, inclusion: { in: [true, false] }
 end

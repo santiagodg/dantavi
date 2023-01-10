@@ -144,3 +144,10 @@ DestinationHotel.create(
   destination: puerto_durazo,
   hotel: palacio_otomi,
 )
+
+User.create!(
+  email: 'admin@dantavi.com',
+  password: '123456',
+  password_confirmation: '123456',
+  is_admin: true,
+)
