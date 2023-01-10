@@ -75,7 +75,7 @@ palacio_otomi = Hotel.create(
   image_url: "hotels/Palacio Otomi.jpg",
 )
 
-DestinationHotel.create(
+viejo_vallarte_los_estados = DestinationHotel.create(
   destination: viejo_vallarta,
   hotel: los_estados,
 )
@@ -145,9 +145,39 @@ DestinationHotel.create(
   hotel: palacio_otomi,
 )
 
+test_user_1 = User.create!(
+  email: "testuser1@dantavi.com",
+  password: "123456",
+  password_confirmation: "123456",
+  is_admin: false,
+)
+
+test_user_2 = User.create!(
+  email: "testuser2@dantavi.com",
+  password: "123456",
+  password_confirmation: "123456",
+  is_admin: false,
+)
+
 User.create!(
   email: 'admin@dantavi.com',
   password: '123456',
   password_confirmation: '123456',
   is_admin: true,
+)
+
+Reservation.create!(
+  destination_hotel: viejo_vallarte_los_estados,
+  user: test_user_1,
+  start: Date.tomorrow,
+  end: Date.tomorrow + 4,
+  party_size: 2,
+)
+
+Reservation.create!(
+  destination_hotel: viejo_vallarte_los_estados,
+  user: test_user_2,
+  start: Date.tomorrow + 2,
+  end: Date.tomorrow + 16,
+  party_size: 4,
 )

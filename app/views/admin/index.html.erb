@@ -1,0 +1,16 @@
+<div class="container my-5">
+  <h1>Admin Dashboard</h1>
+
+  <p>
+    Navegue a un hotel en un destino para visualizar las reservaciones. (Intente entrando a Viejo Vallarta > Los Estados).
+  </p>
+
+  <h2>Destinos:</h2>
+  <ul>
+    <% @destinations.each do |destination| %>
+      <li>
+        <%= link_to destination.name, admin_destination_path(destination.id) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

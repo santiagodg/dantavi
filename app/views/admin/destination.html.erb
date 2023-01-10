@@ -1,0 +1,19 @@
+<div class="container my-5">
+  <h1>
+    Administración de Destino
+    <%= @destination.name %>
+  </h1>
+
+  <p>
+    Navegue a un hotel para visualizar las reservaciones.
+  </p>
+
+  <h2>Hoteles:</h2>
+  <ul>
+    <% @destination.destination_hotels.each do |destination_hotel| %>
+      <li>
+        <%= link_to destination_hotel.hotel.name, admin_destination_hotel_path(destination_hotel.id) %>
+      </li>
+    <% end %>
+  </ul>
+</div>

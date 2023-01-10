@@ -1,0 +1,61 @@
+<div class="container my-5">
+  <h1>
+    Administración de Reservaciones de 
+    <%= @destination_hotel.destination.name %>
+    en
+    <%= @destination_hotel.hotel.name %>
+  </h1>
+
+  <div class="reservations">
+    <% if @destination_hotel.reservations.empty? %>
+      <p>Aún no hay reservaciones.</p>
+    <% else %>
+      <%
+        days = @destination_hotel.reservations.sort do |a, b|
+          a.start <=> b.start
+        end
+        days = days.reduce([]) do |acc, res|
+          if acc.empty?
+            next [[res]]
+          end
+          if res.start != acc[-1][0].start
+            next acc.push([res])
+          end
+          next acc[-1].push(res)
+        end
+      %>
+
+      <% days.each do |day| %>
+        <div class="day">
+          <h2 class="mt-5">
+            Reservaciones del día
+            <%= day.first.start.strftime("%d %b %Y") %>
+          </h2>
+          <hr>
+          <% day.each do |reservation| %>
+            <div class="reservation">
+              <h5>
+                Reservación para
+                <%= reservation.user.email %>
+              </h5>
+              <ul>
+                <li>
+                  Fin de la reservación:
+                  <%= reservation.end.strftime("%d %b %Y") %>
+                </li>
+                <li>
+                  Días reservados:
+                  <%= "%d" % (reservation.end - reservation.start)%>
+                </li>
+                <li>
+                  Cantidad de personas:
+                  <%= reservation.party_size %>
+                </li>
+              </ul>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
