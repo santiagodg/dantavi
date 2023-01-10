@@ -25,3 +25,9 @@ rails db:migrate:reset
 ```
 rails server
 ```
+
+## Gallery
+
+### Landing Page
+
+![Landing Page 1](https://github.com/santiagodg/dantavi/blob/main/docs/imgs/landing-1.png?raw=true)
